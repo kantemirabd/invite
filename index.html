@@ -20,7 +20,6 @@
             overflow-x: hidden;
         }
 
-        /* Floating flower decorations */
         .flower {
             position: fixed;
             opacity: 0.3;
@@ -49,7 +48,7 @@
             z-index: 2;
         }
 
-        /* ===== LOGIN PAGE ===== */
+        /* LOGIN PAGE */
         .login-page {
             display: flex;
             align-items: center;
@@ -61,7 +60,6 @@
         .login-card {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 30px;
-            padding: 0;
             box-shadow: 0 20px 60px rgba(230, 75, 138, 0.2);
             border: 2px solid rgba(255, 105, 180, 0.2);
             text-align: center;
@@ -71,6 +69,14 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
+            z-index: 100;
+        }
+
+        .login-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
         }
 
         .login-card-content {
@@ -157,10 +163,12 @@
             display: none;
         }
 
-        /* ===== GIRL PAGE ===== */
+        /* GIRL PAGE */
         .girl-page {
             display: none;
             animation: fadeIn 0.8s ease;
+            min-height: 100vh;
+            padding: 40px 20px;
         }
 
         .header {
@@ -195,21 +203,15 @@
             font-size: 1em;
             transition: all 0.3s ease;
             font-weight: 600;
+            box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
         }
 
         .back-button:hover {
             transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+            box-shadow: 0 6px 20px rgba(255, 20, 147, 0.4);
         }
 
-        /* Girl Profile */
         .girl-profile {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 20px;
-            overflow: visible;
-            box-shadow: 0 10px 40px rgba(230, 75, 138, 0.15);
-            border: 2px solid rgba(255, 105, 180, 0.2);
-            backdrop-filter: blur(10px);
             max-width: 800px;
             margin: 0 auto;
             animation: fadeInUp 0.8s ease;
@@ -218,17 +220,16 @@
         .girl-image {
             width: 100%;
             height: auto;
-            min-height: 300px;
             background: linear-gradient(135deg, #ffb6d9 0%, #ffc0cb 50%, #ffb3d9 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-size: 5em;
-            overflow: visible;
+            overflow: hidden;
             position: relative;
             margin-bottom: 20px;
-            border-radius: 20px 20px 0 0;
+            border-radius: 20px;
         }
 
         .girl-image img {
@@ -242,15 +243,20 @@
             background: linear-gradient(135deg, #ffb6d9 0%, #ffc0cb 50%, #ffb3d9 100%);
             font-size: 4em;
             color: rgba(255, 255, 255, 0.8);
+            min-height: 300px;
         }
 
         .girl-content {
             padding: 40px;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 228, 239, 0.5) 100%);
+            background: rgba(255, 255, 255, 0.95);
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(230, 75, 138, 0.15);
+            border: 2px solid rgba(255, 105, 180, 0.2);
+            backdrop-filter: blur(10px);
         }
 
         .girl-name {
@@ -268,38 +274,18 @@
             line-height: 1.9;
             font-size: 1.1em;
             font-family: 'Georgia', serif;
-            text-align: center;
+            white-space: pre-wrap;
         }
 
-        .music-control {
-            display: inline-block;
-            background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
-            padding: 12px 30px;
-            border-radius: 50px;
-            cursor: pointer;
-            border: 2px solid #ff1493;
-            color: white;
-            font-size: 1em;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+        audio {
+            width: 100%;
+            max-width: 300px;
             margin-top: 30px;
         }
 
-        .music-control:hover {
-            background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%);
-            transform: scale(1.08);
-            box-shadow: 0 6px 20px rgba(255, 20, 147, 0.4);
-        }
-
-        /* Animations */
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         @keyframes fadeInDown {
@@ -324,33 +310,23 @@
             }
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
-            .login-card {
-                padding: 40px 25px;
-            }
-
             .header h1 {
                 font-size: 2em;
             }
 
             .girl-name {
-                font-size: 2em;
+                font-size: 1.8em;
             }
 
             .girl-content {
                 padding: 25px;
             }
         }
-
-        audio {
-            width: 220px;
-            margin-top: 15px;
-        }
     </style>
 </head>
 <body>
-    <!-- Floating flower decorations -->
+    <!-- Flowers -->
     <div class="flower flower1">🌸</div>
     <div class="flower flower2">💐</div>
     <div class="flower flower3">🌷</div>
@@ -366,23 +342,24 @@
                 <h1>✨ Welcome ✨</h1>
                 <div class="subtitle">8 March Celebration</div>
                 <p>Enter your name to access your special invitation</p>
-            
-            <div class="login-input-group">
-                <label for="nameInput">What's your name?</label>
-                <input 
-                    type="text" 
-                    id="nameInput" 
-                    placeholder="Enter your name..."
-                    onkeypress="handleKeyPress(event)"
-                >
-            </div>
-            
-            <button class="login-btn" onclick="checkName()">
-                💝 Continue
-            </button>
-            
-            <div class="error-message" id="errorMessage">
-                Sorry, you're not on the guest list. Please try again!
+                
+                <div class="login-input-group">
+                    <label for="nameInput">What's your name?</label>
+                    <input 
+                        type="text" 
+                        id="nameInput" 
+                        placeholder="Enter your name..."
+                        onkeypress="handleKeyPress(event)"
+                    >
+                </div>
+                
+                <button class="login-btn" onclick="checkName()">
+                    💝 Continue
+                </button>
+                
+                <div class="error-message" id="errorMessage">
+                    Sorry, you're not on the guest list. Please try again!
+                </div>
             </div>
         </div>
     </div>
@@ -410,18 +387,15 @@
                         Your special message will appear here...
                     </div>
                     
-                    <div style="text-align: center;">
-                        <audio id="bgMusic" loop>
-                            <source src="songs/zen.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
+                    <audio id="bgMusic" loop>
+                        <source type="audio/mpeg">
+                    </audio>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Girls data - ADD YOUR GIRLS HERE
         const girls = {
             "Наиля": {
                 name: "Наиля",
@@ -437,7 +411,7 @@
             },
             "Айдана": {
                 name: "Айдана",
-                description: "Ты лучшая, что случилось со мною в этой жизни. И свои дни буду посвящать только тебе…❤️",
+                description: "Ты лучшая, что случилась со мною в этой жизни. И свои дни буду посвящать только тебе…❤️",
                 image: "https://i.postimg.cc/GhTC7C4T/Whats-App-Image-2026-03-04-at-01-46-57.jpg",
                 song: "songs/aidana.mp3"
             },
@@ -455,7 +429,6 @@
             }
         };
 
-        // Also accept "Гулзада" as alternative spelling
         girls["Гулзада"] = girls["Гульзада"];
 
         function handleKeyPress(event) {
@@ -468,7 +441,6 @@
             const nameInput = document.getElementById('nameInput').value.trim();
             const errorMessage = document.getElementById('errorMessage');
             
-            // Check if name matches (case-insensitive)
             let foundGirl = null;
             for (let girlName in girls) {
                 if (girlName.toLowerCase() === nameInput.toLowerCase()) {
@@ -486,38 +458,26 @@
         }
 
         function showGirlPage(girl) {
-            // Hide login, show girl page
             document.getElementById('loginPage').style.display = 'none';
             document.getElementById('girlPage').style.display = 'block';
 
-            // Update girl info
             document.getElementById('girlName').textContent = girl.name;
             document.getElementById('girlDescription').textContent = girl.description;
 
-            // Update image if exists
             if (girl.image) {
                 const img = document.getElementById('girlImage');
                 const placeholder = document.getElementById('girlPlaceholder');
                 img.src = girl.image;
                 img.style.display = 'block';
-                img.onload = function() {
-                    placeholder.style.display = 'none';
-                };
-                img.onerror = function() {
-                    console.log('Image failed to load: ' + girl.image);
-                    placeholder.style.display = 'block';
-                };
+                placeholder.style.display = 'none';
             }
 
-            // Update and auto-play music
             const audio = document.getElementById('bgMusic');
             audio.src = girl.song;
-            audio.currentTime = 0;
             audio.play().catch(function(error) {
                 console.log('Auto-play prevented:', error);
             });
 
-            // Scroll to top
             window.scrollTo(0, 0);
         }
 
@@ -527,23 +487,9 @@
             document.getElementById('nameInput').value = '';
             document.getElementById('errorMessage').style.display = 'none';
             
-            // Stop music
             const audio = document.getElementById('bgMusic');
             audio.pause();
             audio.currentTime = 0;
-        }
-
-        function toggleMusic() {
-            const audio = document.getElementById('bgMusic');
-            const btn = document.querySelector('.music-control');
-            
-            if (audio.paused) {
-                audio.play();
-                btn.innerHTML = '<span id="musicIcon">⏸️</span> Pause Music';
-            } else {
-                audio.pause();
-                btn.innerHTML = '<span id="musicIcon">🎵</span> Play Music';
-            }
         }
     </script>
 </body>
