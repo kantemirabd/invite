@@ -12,7 +12,7 @@
         }
 
         body {
-            font-family: 'Playfair Display', 'Georgia', serif;
+            font-family: 'Arial', 'Helvetica', sans-serif;
             background: linear-gradient(135deg, #ffeef8 0%, #ffe0f0 50%, #ffd6eb 100%);
             min-height: 100vh;
             padding: 20px;
@@ -125,7 +125,7 @@
             border: 2px solid rgba(255, 105, 180, 0.3);
             border-radius: 15px;
             font-size: 1em;
-            font-family: 'Georgia', serif;
+            font-family: 'Arial', sans-serif;
             transition: all 0.3s ease;
             background: rgba(255, 255, 255, 0.8);
         }
@@ -273,7 +273,7 @@
             color: #555;
             line-height: 1.9;
             font-size: 1.1em;
-            font-family: 'Georgia', serif;
+            font-family: 'Arial', sans-serif;
             white-space: pre-wrap;
         }
 
@@ -339,26 +339,26 @@
         <div class="login-card">
             <img src="https://i.postimg.cc/VvRYzBcb/Whats-App-Image-2026-03-03-at-16-36-06.jpg" alt="Celebration" class="login-image">
             <div class="login-card-content">
-                <h1>✨ Welcome ✨</h1>
-                <div class="subtitle">8 March Celebration</div>
-                <p>Enter your name to access your special invitation</p>
+                <h1>Приглашение</h1>
+                <div class="subtitle">Празднование 8 Марта</div>
+                <p>Введите ваше имя, чтобы получить доступ к персональному приглашению</p>
                 
                 <div class="login-input-group">
-                    <label for="nameInput">What's your name?</label>
+                    <label for="nameInput">Как вас зовут?</label>
                     <input 
                         type="text" 
                         id="nameInput" 
-                        placeholder="Enter your name..."
+                        placeholder="Введите ваше имя..."
                         onkeypress="handleKeyPress(event)"
                     >
                 </div>
                 
                 <button class="login-btn" onclick="checkName()">
-                    💝 Continue
+                    💝 Продолжить
                 </button>
                 
                 <div class="error-message" id="errorMessage">
-                    Sorry, you're not on the guest list. Please try again!
+                    К сожалению, вас нет в списке гостей. Пожалуйста, попробуйте ещё раз!
                 </div>
             </div>
         </div>
@@ -368,12 +368,12 @@
     <div id="girlPage" class="girl-page">
         <div class="container">
             <div style="text-align: center; margin-bottom: 30px;">
-                <button class="back-button" onclick="goBack()">← Back</button>
+                <button class="back-button" onclick="goBack()">← Назад</button>
             </div>
 
             <div class="header">
-                <h1>💝 Your Special Invitation 💝</h1>
-                <p style="color: #d63384; font-size: 1.2em; margin-top: 10px;">International Women's Day</p>
+                <h1>💝 Ваше Специальное Приглашение 💝</h1>
+                <p style="color: #d63384; font-size: 1.2em; margin-top: 10px;">Международный День Женщин</p>
             </div>
 
             <div class="girl-profile">
@@ -399,7 +399,7 @@
         const girls = {
             "Наиля": {
                 name: "Наиля",
-                description: "Прекрасная Наиля! Твоя доброта, элегантность и теплота делают наш мир ярче. Спасибо за то, что ты рядом с нами. С праздником 8 марта!",
+                description: "Наиля моя, спасибо что ты у меня есть. Продолжай сиять, приносить чудо в мою жизнь. Очень люблю тебя!",
                 image: "https://i.postimg.cc/fTFDvb5w/photo-2026-03-04-00-56-03.jpg",
                 song: "songs/zen.mp3"
             },
