@@ -410,27 +410,32 @@
             "Наиля": {
                 name: "Наиля",
                 description: "Прекрасная Наиля! Твоя доброта, элегантность и теплота делают наш мир ярче. Спасибо за то, что ты рядом с нами. С праздником 8 марта!",
-                image: "https://i.postimg.cc/fTFDvb5w/photo-2026-03-04-00-56-03.jpg"
+                image: "https://i.postimg.cc/fTFDvb5w/photo-2026-03-04-00-56-03.jpg",
+                song: "songs/zen.mp3"
             },
             "Алина": {
                 name: "Алина",
                 description: "Чудесная Алина! Твой талант, красота и вдохновляющий дух наполняют нашу жизнь радостью. Ты самая лучшая! С 8 марта!",
-                image: null
+                image: null,
+                song: "songs/alina.mp3"
             },
             "Айдана": {
                 name: "Айдана",
                 description: "Дорогая Айдана! Твоё доброе сердце, креативность и позитивная энергия неоценимы. Спасибо, что ты – наша звезда! Счастливого праздника!",
-                image: null
+                image: null,
+                song: "songs/aidana.mp3"
             },
             "Зарина": {
                 name: "Зарина",
                 description: "Волшебная Зарина! Твоя сила, грация и верность – вот что делает тебя особенной. Мы так благодарны за твою дружбу. С 8 марта!",
-                image: null
+                image: null,
+                song: "songs/zarina.mp3"
             },
             "Гульзада": {
                 name: "Гульзада",
                 description: "Прекрасная Гульзада! Твоё присутствие дарует нам тепло и свет. Ты вдохновляешь нас каждый день. С праздником Международного дня женщин!",
-                image: null
+                image: null,
+                song: "songs/gulzada.mp3"
             }
         };
 
@@ -488,8 +493,10 @@
                 };
             }
 
-            // Auto-play music
+            // Update and auto-play music
             const audio = document.getElementById('bgMusic');
+            audio.src = girl.song;
+            audio.currentTime = 0;
             audio.play().catch(function(error) {
                 console.log('Auto-play prevented:', error);
             });
