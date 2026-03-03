@@ -395,11 +395,8 @@
                     </div>
                     
                     <div style="text-align: center;">
-                        <button class="music-control" onclick="toggleMusic()">
-                            <span id="musicIcon">🎵</span> Play Music
-                        </button>
                         <audio id="bgMusic" loop>
-                            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                            <source src="songs/zen.mp3" type="audio/mpeg">
                         </audio>
                     </div>
                 </div>
@@ -490,6 +487,12 @@
                     placeholder.style.display = 'block';
                 };
             }
+
+            // Auto-play music
+            const audio = document.getElementById('bgMusic');
+            audio.play().catch(function(error) {
+                console.log('Auto-play prevented:', error);
+            });
 
             // Scroll to top
             window.scrollTo(0, 0);
