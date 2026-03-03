@@ -1,9 +1,60 @@
-<!DOCTYPE html>
+<!-- Flowers and Animals -->
+    <div class="flower flower1">🌸</div>
+    <div class="flower flower2">💐</div>
+    <div class="flower flower3">🌷</div>
+    <div class="flower flower4">🌸</div>
+    <div class="flower flower5">💐</div>
+    <div class="flower flower6">🌷</div>
+    <div class="flower flower7">🌹</div>
+    <div class="flower flower8">🌼</div>
+    <div class="flower flower9">🌺</div>
+    <div class="flower flower10">🌸</div>
+    <div class="flower flower11">💐</div>
+
+    <!-- Наиля - Овечки -->
+    <div class="login-animal nailya-animal login-animal1">🐑</div>
+    <div class="login-animal nailya-animal login-animal2">🐑</div>
+    <div class="login-animal nailya-animal login-animal3">🐑</div>
+    <div class="login-animal nailya-animal login-animal4">🐑</div>
+    <div class="login-animal nailya-animal login-animal5">🐑</div>
+    <div class="login-animal nailya-animal login-animal6">🐑</div>
+
+    <!-- Алина - Цыплята -->
+    <div class="login-animal alina-animal login-animal1">🐥</div>
+    <div class="login-animal alina-animal login-animal2">🐥</div>
+    <div class="login-animal alina-animal login-animal3">🐥</div>
+    <div class="login-animal alina-animal login-animal4">🐥</div>
+    <div class="login-animal alina-animal login-animal5">🐥</div>
+    <div class="login-animal alina-animal login-animal6">🐥</div>
+
+    <!-- Айдана - Зайки -->
+    <div class="login-animal aidana-animal login-animal1">🐰</div>
+    <div class="login-animal aidana-animal login-animal2">🐰</div>
+    <div class="login-animal aidana-animal login-animal3">🐰</div>
+    <div class="login-animal aidana-animal login-animal4">🐰</div>
+    <div class="login-animal aidana-animal login-animal5">🐰</div>
+    <div class="login-animal aidana-animal login-animal6">🐰</div>
+
+    <!-- Зарина - Котята -->
+    <div class="login-animal zarina-animal login-animal1">🐱</div>
+    <div class="login-animal zarina-animal login-animal2">🐱</div>
+    <div class="login-animal zarina-animal login-animal3">🐱</div>
+    <div class="login-animal zarina-animal login-animal4">🐱</div>
+    <div class="login-animal zarina-animal login-animal5">🐱</div>
+    <div class="login-animal zarina-animal login-animal6">🐱</div>
+
+    <!-- Гульзада - Щенята -->
+    <div class="login-animal gulzada-animal login-animal1">🐕</div>
+    <div class="login-animal gulzada-animal login-animal2">🐕</div>
+    <div class="login-animal gulzada-animal login-animal3">🐕</div>
+    <div class="login-animal gulzada-animal login-animal4">🐕</div>
+    <div class="login-animal gulzada-animal login-animal5">🐕</div>
+    <div class="login-animal gulzada-animal login-animal6">🐕</div><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>You Are Invited - 8 March Celebration</title>
+    <title>8 March Invitation</title>
     <style>
         * {
             margin: 0;
@@ -12,8 +63,8 @@
         }
 
         body {
-            font-family: 'Arial', 'Helvetica', sans-serif;
-            background: linear-gradient(135deg, #ffeef8 0%, #ffe0f0 50%, #ffd6eb 100%);
+            font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
             min-height: 100vh;
             padding: 20px;
             position: relative;
@@ -22,19 +73,47 @@
 
         .flower {
             position: fixed;
-            opacity: 0.3;
-            font-size: 3em;
-            animation: float 6s ease-in-out infinite;
+            opacity: 0.15;
+            font-size: 4em;
+            animation: float 8s infinite ease-in-out;
             pointer-events: none;
-            z-index: 1;
         }
 
+        /* Flowers for login page */
+        .login-animal {
+            position: fixed;
+            opacity: 0.15;
+            font-size: 5em;
+            animation: float 8s infinite ease-in-out;
+            pointer-events: none;
+            display: none;
+        }
+
+        .login-animal1 { top: 10%; left: 5%; animation-delay: 0s; }
+        .login-animal2 { top: 25%; right: 8%; animation-delay: 1s; }
+        .login-animal3 { top: 50%; left: 3%; animation-delay: 2s; }
+        .login-animal4 { top: 65%; right: 5%; animation-delay: 1.5s; }
+        .login-animal5 { top: 80%; left: 10%; animation-delay: 0.5s; }
+        .login-animal6 { top: 35%; right: 3%; animation-delay: 2.5s; }
+
+        /* Animals for each girl */
+        .nailya-animal { display: none; }
+        .alina-animal { display: none; }
+        .aidana-animal { display: none; }
+        .zarina-animal { display: none; }
+        .gulzada-animal { display: none; }
+
         .flower1 { top: 10%; left: 5%; animation-delay: 0s; }
-        .flower2 { top: 20%; right: 8%; animation-delay: 1s; }
+        .flower2 { top: 25%; right: 8%; animation-delay: 1s; }
         .flower3 { top: 50%; left: 3%; animation-delay: 2s; }
-        .flower4 { top: 60%; right: 5%; animation-delay: 1.5s; }
+        .flower4 { top: 65%; right: 5%; animation-delay: 1.5s; }
         .flower5 { top: 80%; left: 10%; animation-delay: 0.5s; }
-        .flower6 { top: 30%; right: 3%; animation-delay: 2.5s; }
+        .flower6 { top: 35%; right: 3%; animation-delay: 2.5s; }
+        .flower7 { top: 15%; left: 50%; animation-delay: 1.2s; font-size: 5em; }
+        .flower8 { top: 45%; right: 15%; animation-delay: 0.8s; font-size: 5em; }
+        .flower9 { top: 70%; left: 40%; animation-delay: 1.8s; font-size: 5em; }
+        .flower10 { top: 25%; left: 75%; animation-delay: 2.2s; font-size: 5em; }
+        .flower11 { top: 60%; right: 25%; animation-delay: 0.3s; font-size: 5em; }
 
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -58,18 +137,26 @@
         }
 
         .login-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 30px;
-            box-shadow: 0 20px 60px rgba(230, 75, 138, 0.2);
-            border: 2px solid rgba(255, 105, 180, 0.2);
-            text-align: center;
+            background: rgba(20, 20, 30, 0.6);
+            border-radius: 40px;
+            backdrop-filter: blur(30px);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
             max-width: 500px;
             width: 100%;
-            backdrop-filter: blur(10px);
             overflow: hidden;
-            display: flex;
-            flex-direction: column;
             z-index: 100;
+            position: relative;
+        }
+
+        .login-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.5), transparent);
         }
 
         .login-image {
@@ -85,26 +172,35 @@
 
         .login-card h1 {
             font-size: 3em;
-            background: linear-gradient(135deg, #e84b8a 0%, #d63384 100%);
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffc700 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             margin-bottom: 15px;
+            font-weight: 800;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
         }
 
         .login-card .subtitle {
             font-size: 1.3em;
-            color: #d63384;
-            margin-bottom: 30px;
-            font-weight: 300;
-            letter-spacing: 1px;
+            background: linear-gradient(135deg, #ffd700 0%, #e6b800 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
         }
 
         .login-card p {
-            color: #666;
+            color: rgba(255, 255, 255, 0.9);
             font-size: 1.05em;
-            margin-bottom: 40px;
-            line-height: 1.6;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            font-weight: 300;
         }
 
         .login-input-group {
@@ -113,54 +209,63 @@
 
         .login-input-group label {
             display: block;
-            color: #d63384;
-            font-weight: 600;
+            color: #ffd700;
+            font-weight: 700;
             margin-bottom: 10px;
-            font-size: 1.1em;
+            font-size: 1em;
+            letter-spacing: 1px;
         }
 
         .login-input-group input {
             width: 100%;
             padding: 15px 20px;
-            border: 2px solid rgba(255, 105, 180, 0.3);
+            border: 2px solid rgba(255, 215, 0, 0.3);
             border-radius: 15px;
             font-size: 1em;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             transition: all 0.3s ease;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+
+        .login-input-group input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
         }
 
         .login-input-group input:focus {
             outline: none;
-            border-color: #ff1493;
-            box-shadow: 0 0 15px rgba(255, 20, 147, 0.2);
-            background: white;
+            border-color: #ffd700;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.3), inset 0 0 10px rgba(255, 215, 0, 0.1);
+            background: rgba(255, 255, 255, 0.08);
         }
 
         .login-btn {
             width: 100%;
             padding: 15px 30px;
-            background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
-            color: white;
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: #0a0a0a;
             border: none;
             border-radius: 15px;
             font-size: 1.1em;
-            font-weight: 700;
+            font-weight: 800;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+            box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+            letter-spacing: 1px;
         }
 
         .login-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 20, 147, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 45px rgba(255, 215, 0, 0.4);
         }
 
         .error-message {
-            color: #e74c3c;
-            font-size: 1em;
+            color: #ffb3b3;
+            font-size: 0.95em;
             margin-top: 15px;
             display: none;
+            font-weight: 600;
         }
 
         /* GIRL PAGE */
@@ -181,34 +286,40 @@
         .header h1 {
             font-size: 3.5em;
             margin-bottom: 15px;
-            background: linear-gradient(135deg, #e84b8a 0%, #d63384 50%, #c2185b 100%);
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffc700 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
             letter-spacing: 2px;
-            font-weight: 700;
+            font-weight: 800;
+            text-shadow: 0 4px 20px rgba(255, 215, 0, 0.2);
+        }
+
+        .header p {
+            color: rgba(255, 255, 255, 0.85);
+            letter-spacing: 1px;
         }
 
         .back-button {
             display: inline-block;
             margin-bottom: 20px;
-            background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
-            color: white;
-            padding: 10px 25px;
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: #0a0a0a;
+            padding: 12px 28px;
             border-radius: 25px;
             text-decoration: none;
             cursor: pointer;
             border: none;
             font-size: 1em;
             transition: all 0.3s ease;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+            font-weight: 700;
+            box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+            letter-spacing: 1px;
         }
 
         .back-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(255, 20, 147, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 45px rgba(255, 215, 0, 0.4);
         }
 
         .girl-profile {
@@ -220,7 +331,7 @@
         .girl-image {
             width: 100%;
             height: auto;
-            background: linear-gradient(135deg, #ffb6d9 0%, #ffc0cb 50%, #ffb3d9 100%);
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -229,7 +340,9 @@
             overflow: hidden;
             position: relative;
             margin-bottom: 20px;
-            border-radius: 20px;
+            border-radius: 25px;
+            box-shadow: 0 25px 50px rgba(255, 215, 0, 0.1);
+            border: 2px solid rgba(255, 215, 0, 0.2);
         }
 
         .girl-image img {
@@ -240,37 +353,37 @@
         }
 
         .girl-image.placeholder {
-            background: linear-gradient(135deg, #ffb6d9 0%, #ffc0cb 50%, #ffb3d9 100%);
+            background: linear-gradient(135deg, #7c3aed 0%, #0ea5e9 50%, #00d4ff 100%);
             font-size: 4em;
             color: rgba(255, 255, 255, 0.8);
-            min-height: 300px;
+            min-height: 350px;
         }
 
         .girl-content {
             padding: 40px;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.08);
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(230, 75, 138, 0.15);
-            border: 2px solid rgba(255, 105, 180, 0.2);
-            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(20px);
         }
 
         .girl-name {
             font-size: 2.8em;
-            background: linear-gradient(135deg, #e84b8a 0%, #d63384 100%);
+            background: linear-gradient(135deg, #ff6b9d 0%, #ffa502 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             margin-bottom: 20px;
-            font-weight: 700;
+            font-weight: 800;
         }
 
         .girl-description {
-            color: #555;
+            color: rgba(255, 255, 255, 0.85);
             line-height: 1.9;
             font-size: 1.1em;
             font-family: 'Arial', sans-serif;
@@ -281,6 +394,7 @@
             width: 100%;
             max-width: 300px;
             margin-top: 30px;
+            filter: brightness(0.9);
         }
 
         @keyframes fadeIn {
@@ -315,12 +429,30 @@
                 font-size: 2em;
             }
 
+            .login-card h1 {
+                font-size: 2.2em;
+            }
+
             .girl-name {
                 font-size: 1.8em;
             }
 
             .girl-content {
                 padding: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .login-card h1 {
+                font-size: 1.8em;
+            }
+
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .girl-image.placeholder {
+                min-height: 250px;
             }
         }
     </style>
@@ -373,7 +505,7 @@
 
             <div class="header">
                 <h1>💝 Ваше Специальное Приглашение 💝</h1>
-                <p style="color: #d63384; font-size: 1.2em; margin-top: 10px;">Международный День Женщин</p>
+                <p>Международный День Женщин</p>
             </div>
 
             <div class="girl-profile">
@@ -382,9 +514,9 @@
                     <span id="girlPlaceholder">👩</span>
                 </div>
                 <div class="girl-content">
-                    <div class="girl-name" id="girlName">Her Name</div>
+                    <div class="girl-name" id="girlName">Её имя</div>
                     <div class="girl-description" id="girlDescription">
-                        Your special message will appear here...
+                        Ваше специальное сообщение появится здесь...
                     </div>
                     
                     <audio id="bgMusic" loop>
@@ -460,6 +592,22 @@
         function showGirlPage(girl) {
             document.getElementById('loginPage').style.display = 'none';
             document.getElementById('girlPage').style.display = 'block';
+
+            // Hide all animals, show flowers only
+            document.querySelectorAll('.login-animal').forEach(el => el.style.display = 'none');
+
+            // Show appropriate animals based on girl
+            if (girl.name === 'Наиля') {
+                document.querySelectorAll('.nailya-animal').forEach(el => el.style.display = 'block');
+            } else if (girl.name === 'Алина') {
+                document.querySelectorAll('.alina-animal').forEach(el => el.style.display = 'block');
+            } else if (girl.name === 'Айдана') {
+                document.querySelectorAll('.aidana-animal').forEach(el => el.style.display = 'block');
+            } else if (girl.name === 'Зарина') {
+                document.querySelectorAll('.zarina-animal').forEach(el => el.style.display = 'block');
+            } else if (girl.name === 'Гульзада') {
+                document.querySelectorAll('.gulzada-animal').forEach(el => el.style.display = 'block');
+            }
 
             document.getElementById('girlName').textContent = girl.name;
             document.getElementById('girlDescription').textContent = girl.description;
